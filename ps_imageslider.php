@@ -620,6 +620,7 @@ class Ps_ImageSlider extends Module implements WidgetInterface
     {
         if ('AdminModules' !== Tools::getValue('controller') ||
             Tools::getValue('configure') !== $this->name ||
+            Tools::getIsset('addSlide') ||
             Tools::getIsset('id_slide')) {
             return;
         }
